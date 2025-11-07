@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const lastUpdate = new Date().toLocaleDateString('pt-BR', {
+	day: '2-digit',
+	month: 'long',
+	year: 'numeric',
+});
+---
+
+<BaseLayout
+	title='Política de Privacidade | NEXUS Black Friday'
+	description='Política de Privacidade da Landing Page Black Friday NEXUS'
+>
+	<div class='min-h-screen bg-white py-16'>
+		<div class='container mx-auto px-4 sm:px-6 lg:px-8'>
+			<div class='max-w-4xl mx-auto'>
+				<h1 class='text-4xl font-bold text-nexus-tech mb-8'>
+					Política de Privacidade
+				</h1>
+
+				<div class='prose prose-lg max-w-none'>
+					<p class='text-gray-600 mb-6'>
+						Última atualização: {lastUpdate}
+					</p>
+
+					<section class='mb-8'>
+						<h2 class='text-2xl font-bold text-nexus-tech mb-4'>
+							1. Coleta de Dados
+						</h2>
+						<p class='text-gray-700 leading-relaxed'>
+							A NEXUS Comunicação coleta informações pessoais
+							fornecidas voluntariamente através do formulário de
+							cadastro desta landing page, incluindo: nome
+							completo, e-mail, telefone (WhatsApp) e nome da
+							empresa.
+						</p>
+					</section>
+
+					<section class='mb-8'>
+						<h2 class='text-2xl font-bold text-nexus-tech mb-4'>
+							2. Uso dos Dados
+						</h2>
+						<p class='text-gray-700 leading-relaxed mb-4'>
+							Os dados coletados serão utilizados para:
+						</p>
+						<ul
+							class='list-disc list-inside text-gray-700 space-y-2'
+						>
+							<li>
+								Enviar informações sobre ofertas e promoções da
+								Black Friday NEXUS
+							</li>
+							<li>
+								Estabelecer contato comercial através dos canais
+								informados
+							</li>
+							<li>
+								Enviar comunicações sobre produtos e serviços da
+								NEXUS
+							</li>
+							<li>Análise e melhoria de nossos serviços</li>
+						</ul>
+					</section>
+
+					<section class='mb-8'>
+						<h2 class='text-2xl font-bold text-nexus-tech mb-4'>
+							3. Compartilhamento de Dados
+						</h2>
+						<p class='text-gray-700 leading-relaxed'>
+							A NEXUS não vende, aluga ou compartilha seus dados
+							pessoais com terceiros para fins de marketing. Seus
+							dados podem ser compartilhados apenas com
+							prestadores de serviços que nos auxiliam nas
+							operações, sempre sob termos de confidencialidade.
+						</p>
+					</section>
+
+					<section class='mb-8'>
+						<h2 class='text-2xl font-bold text-nexus-tech mb-4'>
+							4. Segurança
+						</h2>
+						<p class='text-gray-700 leading-relaxed'>
+							Implementamos medidas de segurança técnicas e
+							organizacionais para proteger seus dados pessoais
+							contra acesso não autorizado, alteração, divulgação
+							ou destruição.
+						</p>
+					</section>
+
+					<section class='mb-8'>
+						<h2 class='text-2xl font-bold text-nexus-tech mb-4'>
+							5. Seus Direitos
+						</h2>
+						<p class='text-gray-700 leading-relaxed mb-4'>
+							De acordo com a LGPD (Lei Geral de Proteção de
+							Dados), você tem direito a:
+						</p>
+						<ul
+							class='list-disc list-inside text-gray-700 space-y-2'
+						>
+							<li>
+								Confirmar a existência de tratamento de seus
+								dados
+							</li>
+							<li>Acessar seus dados pessoais</li>
+							<li>
+								Corrigir dados incompletos, inexatos ou
+								desatualizados
+							</li>
+							<li>Solicitar a exclusão de seus dados</li>
+							<li>Revogar o consentimento</li>
+						</ul>
+					</section>
+
+					<section class='mb-8'>
+						<h2 class='text-2xl font-bold text-nexus-tech mb-4'>
+							6. Cookies
+						</h2>
+						<p class='text-gray-700 leading-relaxed'>
+							Este site pode utilizar cookies para melhorar a
+							experiência do usuário e coletar informações
+							analíticas. Você pode configurar seu navegador para
+							recusar cookies, mas isso pode afetar algumas
+							funcionalidades do site.
+						</p>
+					</section>
+
+					<section class='mb-8'>
+						<h2 class='text-2xl font-bold text-nexus-tech mb-4'>
+							7. Contato
+						</h2>
+						<p class='text-gray-700 leading-relaxed'>
+							Para exercer seus direitos ou esclarecer dúvidas
+							sobre esta política, entre em contato:
+						</p>
+						<p class='text-gray-700 mt-4'>
+							<strong>E-mail:</strong> sms@nexuscomunicacao.com<br
+							/>
+							<strong>Site:</strong>
+							<a
+								href='https://nexuscomunicacao.com'
+								class='text-nexus-respect hover:underline'
+								>nexuscomunicacao.com</a
+							>
+						</p>
+					</section>
+
+					<section class='mb-8'>
+						<h2 class='text-2xl font-bold text-nexus-tech mb-4'>
+							8. Alterações
+						</h2>
+						<p class='text-gray-700 leading-relaxed'>
+							Esta política pode ser atualizada periodicamente.
+							Recomendamos que você a revise regularmente. A data
+							da última atualização está indicada no topo desta
+							página.
+						</p>
+					</section>
+				</div>
+
+				<div class='mt-12 text-center'>
+					<a
+						href='/'
+						class='inline-block bg-nexus-respect text-white font-bold px-8 py-3 rounded-full hover:bg-nexus-creative transition-colors'
+					>
+						Voltar para a Página Principal
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<Footer />
+	<WhatsAppButton />
+</BaseLayout>

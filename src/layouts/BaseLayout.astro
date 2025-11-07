@@ -1,0 +1,111 @@
+---
+import Analytics from '@vercel/analytics/astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Black Friday NEXUS | Venda Mais com SMS, WhatsApp e RCS',
+  description = 'Descubra como SMS, WhatsApp e o inovador RCS da NEXUS transformam ofertas em vendas recorde na Black Friday com conversão imediata. O trio imbatível para suas vendas!',
+  ogImage = '/og-image.jpg'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Fonts - Geologica from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Schema.org for Organization -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Nexus Comunicação",
+        "description": "A NEXUS auxilia empresas a se comunicarem e interagirem melhor com seus clientes através de diversos canais de comunicação.",
+        "url": "https://nexuscomunicacao.com",
+        "logo": "https://nexuscomunicacao.com/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/nexuscomunicacao",
+          "https://www.linkedin.com/company/nexuscomunicacao",
+          "https://www.instagram.com/nexuscomunicacao"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "areaServed": "BR",
+          "availableLanguage": "Portuguese"
+        }
+      }
+    </script>
+
+    <!-- Schema.org for Service -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "RCS Business Messaging",
+        "provider": {
+          "@type": "Organization",
+          "name": "Nexus Comunicação"
+        },
+        "description": "Serviço de comunicação RCS para empresas otimizarem vendas e engajamento com clientes através de mensagens interativas.",
+        "areaServed": "BR"
+      }
+    </script>
+  </head>
+  <body class="font-geologica antialiased bg-white text-nexus-tech">
+    <slot />
+    <Analytics />
+  </body>
+</html>

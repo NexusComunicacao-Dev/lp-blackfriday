@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Challenge from '../components/Challenge.astro';
+import TrioImbativel from '../components/TrioImbativel.astro';
+import WhyNexus from '../components/WhyNexus.astro';
+import CTAForm from '../components/CTAForm.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Challenge Section - O Problema -->
+  <Challenge />
+
+  <!-- Trio Imbatível - SMS, WhatsApp e RCS -->
+  <TrioImbativel />
+
+  <!-- Why NEXUS - Diferenciais -->
+  <WhyNexus />
+
+  <!-- CTA Form - Cadastro -->
+  <CTAForm />
+
+  <!-- Footer -->
+  <Footer />
+
+  <!-- WhatsApp Floating Button -->
+  <WhatsAppButton />
+</BaseLayout>
+
+<style is:global>
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #034BD3;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF7C1A;
+  }
+</style>

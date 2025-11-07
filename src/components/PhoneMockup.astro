@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import mockupRcs from '../../public/mockup-rcs.png';
+import mockupRcs2 from '../../public/mockup-rcs2.png';
+
+interface Props {
+  variant?: 'rcs' | 'rcs2' | 'default';
+}
+
+const { variant = 'rcs' } = Astro.props;
+
+// Determinar qual imagem usar
+const imageSource = variant === 'rcs2' ? mockupRcs2 : mockupRcs;
+const altText = variant === 'rcs2'
+  ? 'Mockup RCS 2 - Mensagem interativa da Black Friday NEXUS'
+  : 'Mockup RCS - Mensagem interativa da Black Friday NEXUS';
+---
+
+<div class="relative mx-auto max-w-sm">
+  <Image
+    src={imageSource}
+    alt={altText}
+    class="w-full drop-shadow-2xl rounded-[40px]"
+    loading="lazy"
+    quality={90}
+  />
+</div>

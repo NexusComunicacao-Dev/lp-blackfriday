@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../public/logo.png';
+import ladyHoldingPhone from '../../public/lady_holding_phone.png';
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-bf-black via-bf-gray-dark to-nexus-tech py-20 lg:py-32">
+  <!-- Decorative Elements -->
+  <div class="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+  <div class="absolute -top-24 -right-24 w-96 h-96 bg-nexus-respect/20 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-nexus-creative/20 rounded-full blur-3xl"></div>
+
+  <!-- Lady Holding Phone - Absolute positioned -->
+  <div class="hidden lg:block absolute bottom-0 right-0 2xl:right-[10%] w-1/2 h-full pointer-events-none">
+    <div class="relative w-full h-full flex items-end justify-end">
+      <Image
+        src={ladyHoldingPhone}
+        alt="Mulher segurando telefone com RCS - Black Friday NEXUS"
+        class="h-full w-auto object-contain object-bottom"
+        quality={90}
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Content -->
+      <div class="text-center lg:text-left space-y-8 animate-fade-in">
+        <!-- Logo -->
+        <div class="inline-block">
+          <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+            <Image
+              src={logo}
+              alt="NEXUS Comunicação"
+              class="h-8 w-auto"
+              quality={95}
+            />
+          </div>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          Black Friday: Sua <span class="text-transparent bg-clip-text bg-gradient-to-r from-bf-gold to-nexus-creative">Comunicação</span> Define Suas <span class="text-transparent bg-clip-text bg-gradient-to-r from-nexus-creative to-bf-gold">Vendas!</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <h2 class="text-xl sm:text-2xl text-gray-100 leading-relaxed">
+          Descubra como <span class="text-nexus-respect font-semibold">SMS</span>, <span class="text-green-400 font-semibold">WhatsApp</span> e o inovador <span class="text-nexus-creative font-semibold">RCS</span> da NEXUS transformam ofertas em vendas recorde com <span class="text-bf-gold font-semibold">conversão imediata</span>.
+        </h2>
+
+        <!-- Features List -->
+        <ul class="space-y-3 text-gray-100">
+          <li class="flex items-start lg:justify-start justify-center gap-3">
+            <svg class="w-6 h-6 text-bf-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Mensagens interativas que convertem na hora</span>
+          </li>
+          <li class="flex items-start lg:justify-start justify-center gap-3">
+            <svg class="w-6 h-6 text-bf-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Agentes compartilhados com tema de Black Friday prontos</span>
+          </li>
+          <li class="flex items-start lg:justify-start justify-center gap-3">
+            <svg class="w-6 h-6 text-bf-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Taxa de conversão superior ao SMS e WhatsApp tradicionais</span>
+          </li>
+        </ul>
+
+        <!-- CTA Button -->
+        <div class="pt-4">
+          <a
+            href="#cadastro"
+            class="inline-block bg-gradient-to-r from-nexus-creative to-bf-gold text-white font-bold text-lg px-8 py-4 rounded-full hover:shadow-2xl hover:shadow-nexus-creative/50 transition-all duration-300 hover:scale-105"
+          >
+            Quero Vender Mais Nesta Black Friday!
+          </a>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="flex flex-wrap items-center gap-6 justify-center lg:justify-start pt-4 text-gray-200 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-bf-gold" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+            <span>Mais de 10 anos no mercado</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-bf-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Suporte especializado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spacer for layout balance on desktop -->
+      <div class="hidden lg:block"></div>
+    </div>
+  </div>
+</section>
