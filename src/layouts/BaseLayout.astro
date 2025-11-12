@@ -10,7 +10,7 @@ interface Props {
 const {
   title = 'Black Friday NEXUS | Venda Mais com SMS, WhatsApp e RCS',
   description = 'Descubra como SMS, WhatsApp e o inovador RCS da NEXUS transformam ofertas em vendas recorde na Black Friday com conversão imediata. O trio imbatível para suas vendas!',
-  ogImage = '/og-image.jpg'
+  ogImage = '/og-image.png'
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -44,6 +44,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XVC0PMELZH"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XVC0PMELZH');
+    </script>
 
     <!-- Fonts - Geologica from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
